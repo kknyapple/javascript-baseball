@@ -7,6 +7,7 @@ class Model {
   constructor() {
     this.computerNumber = [];
     this.inputNumber = [];
+    this.result = [];
   }
 
   setComputerNumber() {
@@ -16,6 +17,7 @@ class Model {
         this.computerNumber.push(number);
       }
     }
+    this.computerNumber = [...this.computerNumber.join("").toString()];
   }
 
   getComputerNumber() {
@@ -24,11 +26,19 @@ class Model {
   }
 
   setInputNumber(number) {
-    this.inputNumber = number;
+    this.inputNumber = [...number];
   }
 
   getInputNumber() {
     return this.inputNumber;
+  }
+
+  setResult([strike, ball]) {
+    this.result = [strike, ball];
+  }
+
+  getResult() {
+    return this.result;
   }
 }
 
