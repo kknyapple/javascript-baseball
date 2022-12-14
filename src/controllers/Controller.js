@@ -15,10 +15,4 @@ class Controller {
   }
 }
 
-const model = new Model();
-const view = new View(model);
-const controller = new Controller(view, model);
-
-controller.game();
-
 module.exports = Controller;
