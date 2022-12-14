@@ -22,10 +22,18 @@ class Model {
     console.log(this.computerNumber);
     return this.computerNumber;
   }
+
+  setInputNumber(number) {
+    this.inputNumber = number;
+  }
+
+  getInputNumber() {
+    return this.inputNumber;
+  }
 }
 
-const model = new Model();
-model.setComputerNumber();
-model.getComputerNumber();
+// const model = new Model();
+// model.setComputerNumber();
+// model.getComputerNumber();
 
 module.exports = Model;
