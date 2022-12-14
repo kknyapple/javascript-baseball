@@ -76,12 +76,12 @@ class Controller {
     return false;
   }
 
-  restartGame = (code) => {
+  restartGame(code) {
     if (code === "1") {
       this.model.resetComputerNumber();
       this.game();
     } else if (code === "2") MissionUtils.Console.close();
-  };
+  }
 
   playGame() {
     MissionUtils.Console.readLine("숫자를 입력해주세요 : ", (input) => {
@@ -96,7 +96,8 @@ class Controller {
       MissionUtils.Console.print(this.getResultMessage());
 
       if (this.isCorrect(this.model.getResult())) {
-        this.view.printRestartGame(this.restartGame);
+        const that = this;
+        this.view.printRestartGame(this.restartGame.bind(this));
       } else {
         this.playGame();
       }
