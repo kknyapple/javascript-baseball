@@ -10,6 +10,10 @@ class Model {
     this.result = [];
   }
 
+  resetComputerNumber() {
+    this.computerNumber = [];
+  }
+
   setComputerNumber() {
     while (this.computerNumber.length < 3) {
       const number = MissionUtils.Random.pickNumberInRange(1, 9);
